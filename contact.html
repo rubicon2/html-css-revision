@@ -19,7 +19,36 @@
             </nav>
         </header>
         <main>
-            
+            <h2>Contact Us</h2>
+            <form action="https://httpbin.org/post" method="post">
+                <div class="form-item">
+                    <label for="email">Email:</label>
+                    <input required type="email" name="email" id="email" placeholder="jimbo@gmail.com">
+                </div>
+                <div class="form-item">
+                    <label for="name">Name:</label>
+                    <input required type="text" name="user-name" id="user-name" placeholder="Jimbo">
+                </div>
+                <div class="form-item">
+                    <label for="enquiry-type">Query Type:</label>
+                    <select name="enquiry-type" id="enquiry-type">
+                        <option selected value="subscriptions">Subscriptions</option>
+                        <option value="corrections">Corrections</option>
+                        <option value="complaints">Complaints</option>
+                        <option value="requests">Requests</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="message">Message:</label>
+                    <textarea required name="message" id="Message" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+                </div>
+                <div class="form-item">
+                    <label for="subscribe-me">I want to subscribe to the newsletter</label>
+                    <input type="checkbox" name="subscribe-me" id="subscribe-me">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </main>
     </body>
 </html>
