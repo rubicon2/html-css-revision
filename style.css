@@ -14,6 +14,15 @@ body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+    width: 60%;
+    min-height: 100dvh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
 .page-heading {
 
 }
