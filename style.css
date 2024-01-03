@@ -2,9 +2,20 @@
 
 :root {
     box-sizing: border-box;
-    --main-text-color: black;
+    --main-text-color: var(--off-black);
     --main-font-size: 1rem;
     --main-padding: 1rem;
+    --article-gap: 2rem;
+
+    --off-white: #efefef;
+    --light-grey: #e0e0e0;
+    --mid-grey: #898989;
+    --dark-grey: #262626;
+    --off-black: #111111;
+
+    --blue: #1556b2;
+    --pink: #b21556;
+    --green: #56b215;
 }
 
 *, *::before, *::after {
@@ -18,6 +29,8 @@
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--light-grey);
 }
 
 a {
@@ -26,13 +39,18 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin-bottom: var(--main-padding);
+}
+
 button {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: var(--main-font-size);
+    color: var(--off-white);
 
     padding: 0.5rem 1rem;
 
-    background-color:rgb(78, 130, 172);
+    background-color:var(--pink);
     border-radius: 10px;
     border: none
 }
@@ -44,6 +62,8 @@ button {
 
     display: flex;
     flex-direction: column;
+
+    background-color: var(--off-white);
 }
 
 .page-header,
@@ -61,29 +81,21 @@ button {
     margin-bottom: 1rem;
 }
 
-.main-nav {
+.page-heading * {
+    font-size: 3rem;
+    color: var(--pink);
+    letter-spacing: -.2rem;
+}
 
+.main-nav, 
+.secondary-nav {
+    background-color: var(--pink);
 }
 
 .main-nav > ul {
     display: flex;
     
     list-style: none;
-}
-
-.main-nav li {
-    flex: 1;
-    padding: var(--main-padding);
-
-    text-align: center;
-}
-
-.page-footer {
-    margin-top: auto;
-}
-
-.secondary-nav {
-
 }
 
 .secondary-nav > ul {
@@ -93,9 +105,25 @@ button {
     list-style: none;
 }
 
+.main-nav li {
+    flex: 1;
+    padding: var(--main-padding) 0;
+
+    text-align: center;
+}
+
 .secondary-nav li {
     padding: var(--main-padding) 2rem;
     text-align: center;
+}
+
+.main-nav a,
+.secondary-nav a {
+    color: var(--light-grey);
+}
+
+.page-footer {
+    margin-top: auto;
 }
 
 .page-content {
@@ -121,7 +149,13 @@ button {
 .side-article {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
+}
+
+.article p:last-of-type,
+.main-article p:last-of-type,
+.side-article p:last-of-type {
+    margin-bottom: 0;
 }
 
 .article-img {
@@ -132,20 +166,16 @@ button {
     width: 100%;
 }
 
-.side-article {
-
-}
-
 .side-article-img {
     width: 100%;
 }
 
 .article-description {
-
+    font-style: italic;
 }
 
 .article-footer {
-
+    font-size: 0.9rem;
 }
 
 .article-author {
