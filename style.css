@@ -2,16 +2,39 @@
 
 :root {
     box-sizing: border-box;
+    --main-text-color: black;
+    --main-font-size: 1rem;
+    --main-padding: 1rem;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
     margin: 0;
-    padding: 0
+    padding: 0;
+
+    /* For debug purposes */
+    /* border: solid 1px red; */
 }
 
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: var(--main-text-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: var(--main-font-size);
+
+    padding: 0.5rem 1rem;
+
+    background-color:rgb(78, 130, 172);
+    border-radius: 10px;
+    border: none
 }
 
 .wrapper {
@@ -23,8 +46,14 @@ body {
     flex-direction: column;
 }
 
-.page-heading {
+.page-header,
+.page-content,
+.page-footer {
+    padding: var(--main-padding);
+}
 
+.page-heading {
+    margin-bottom: 1rem;
 }
 
 .main-nav {
@@ -32,7 +61,20 @@ body {
 }
 
 .main-nav > ul {
+    display: flex;
+    
+    list-style: none;
+}
 
+.main-nav li {
+    flex: 1;
+    padding: var(--main-padding);
+
+    text-align: center;
+}
+
+.page-footer {
+    margin-top: auto;
 }
 
 .secondary-nav {
@@ -40,16 +82,33 @@ body {
 }
 
 .secondary-nav > ul {
-
+    display: flex;
+    justify-content: center;
+    
+    list-style: none;
 }
 
+.secondary-nav li {
+    padding: var(--main-padding) 2rem;
+    text-align: center;
+}
 
 .page-content {
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--main-padding);
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-padding);
+}
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-padding);
 }
 
 .article {
@@ -61,11 +120,19 @@ body {
 }
 
 .article-img {
-
+    width: 300px;
 }
 
 .main-article-img {
+    width: 500px;
+}
 
+.side-article {
+
+}
+
+.side-article-img {
+    width: 300px;
 }
 
 .article-description {
@@ -77,5 +144,46 @@ body {
 }
 
 .article-author {
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-padding);
+
+    width: 600px;
+}
+
+.contact-form button {
+    place-self: center;
+}
+
+.form-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    padding: 0.2rem;
+}
+
+#message {
+    resize: none;
+
+    font-size: 1rem;
+}
+
+#subscribe-me {
+    justify-self: start;
+    align-self: center;
+}
+
+.form-item > label {
 
 }
