@@ -31,6 +31,8 @@ body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: var(--main-text-color);
     background-color: var(--light-grey);
+
+    overflow: scroll;
 }
 
 a {
