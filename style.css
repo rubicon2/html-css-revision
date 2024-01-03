@@ -49,7 +49,12 @@ button {
 .page-header,
 .page-content,
 .page-footer {
-    padding: var(--main-padding);
+    padding: var(--main-padding) 2rem;
+}
+
+.page-header,
+.page-content {
+    padding-bottom: 0;
 }
 
 .page-heading {
@@ -102,29 +107,29 @@ button {
 .content {
     display: flex;
     flex-direction: column;
-    gap: var(--main-padding);
+    gap: var(--article-gap);
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: var(--main-padding);
+    gap: var(--article-gap);
 }
 
-.article {
-
-}
-
-.main-article {
-
+.article,
+.main-article,
+.side-article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .article-img {
-    width: 300px;
+    width: 60%;
 }
 
 .main-article-img {
-    width: 500px;
+    width: 100%;
 }
 
 .side-article {
@@ -132,7 +137,7 @@ button {
 }
 
 .side-article-img {
-    width: 300px;
+    width: 100%;
 }
 
 .article-description {
