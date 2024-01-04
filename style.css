@@ -149,6 +149,11 @@ button {
 .article,
 .main-article,
 .side-article {
+    background-color: var(--off-white);
+    border-radius: 25px;
+
+    box-shadow: 5px 5px 10px 10px #6161610e;
+
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -160,16 +165,27 @@ button {
     margin-bottom: 0;
 }
 
-.article-img {
-    width: 60%;
-}
-
-.main-article-img {
-    width: 100%;
-}
-
+.article-img,
+.main-article-img,
 .side-article-img {
+    border-radius: 25px 25px 0 0;
+
     width: 100%;
+    max-height: 400px;
+}
+
+.article-img,
+.side-article-img {
+    height: 200px;
+}
+
+.article-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    padding: var(--main-padding);
+    padding-top: 0;
 }
 
 .article-description {
