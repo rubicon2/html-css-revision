@@ -120,14 +120,11 @@ button {
 
 .main-nav li {
     flex: 1;
-    padding: var(--main-padding) 0;
-
-    text-align: center;
+    padding: var(--main-padding) 0; 
 }
 
 .secondary-nav li {
     padding: var(--main-padding) 2rem;
-    text-align: center;
 }
 
 .main-nav a,
