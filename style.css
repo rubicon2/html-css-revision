@@ -15,6 +15,7 @@
 
     --blue: #1556b2;
     --pink: #b21556;
+    --dark-pink: #6b0c2c;
     --green: #56b215;
 }
 
@@ -30,7 +31,7 @@
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     color: var(--main-text-color);
-    background-color: var(--light-grey);
+    background-color: var(--mid-grey);
 
     overflow: scroll;
 }
@@ -65,7 +66,7 @@ button {
     display: flex;
     flex-direction: column;
 
-    background-color: var(--off-white);
+    background-color: var(--light-grey);
 }
 
 .page-header,
@@ -105,6 +106,16 @@ button {
     justify-content: center;
     
     list-style: none;
+}
+
+.main-nav li,
+.secondary-nav li {
+    text-align: center;
+}
+
+.main-nav li:hover,
+.secondary-nav li:hover {
+    background-color: var(--dark-pink);
 }
 
 .main-nav li {
