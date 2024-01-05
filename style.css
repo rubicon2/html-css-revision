@@ -14,6 +14,7 @@
     --off-black: #111111;
 
     --blue: #1556b2;
+    --light-pink: #d31f6a;
     --pink: #b21556;
     --dark-pink: #6b0c2c;
     --green: #56b215;
@@ -120,10 +121,18 @@ button {
 .secondary-nav li {
     text-align: center;
     cursor: pointer;
+    user-select: none;
+
+    transition: all 100ms;
 }
 
 .main-nav li:hover,
 .secondary-nav li:hover {
+    background-color: var(--light-pink);
+}
+
+.main-nav li:active,
+.secondary-nav li:active {
     background-color: var(--dark-pink);
 }
 
