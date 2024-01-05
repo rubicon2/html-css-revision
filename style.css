@@ -70,9 +70,12 @@ button {
 }
 
 .page-header,
-.page-content,
-.page-footer {
+.page-content {
     padding: var(--main-padding) 2rem;
+}
+
+.page-footer {
+    padding-top: var(--main-padding);
 }
 
 .page-header,
@@ -95,6 +98,11 @@ button {
     background-color: var(--pink);
 }
 
+.main-nav {
+    position: sticky;
+    top: 0;
+}
+
 .main-nav > ul {
     display: flex;
     
@@ -111,6 +119,7 @@ button {
 .main-nav li,
 .secondary-nav li {
     text-align: center;
+    cursor: pointer;
 }
 
 .main-nav li:hover,
