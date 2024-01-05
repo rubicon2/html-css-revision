@@ -34,7 +34,7 @@ body {
     color: var(--main-text-color);
     background-color: var(--mid-grey);
 
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 a {
