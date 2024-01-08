@@ -60,7 +60,7 @@ button {
 }
 
 .wrapper {
-    width: 60%;
+    width: min(100vw, 1050px);
     min-height: 100dvh;
     margin: 0 auto;
 
@@ -172,6 +172,24 @@ button {
     gap: var(--article-gap);
 }
 
+@media (max-width: 600px) {
+    .page-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        gap: 1rem;
+    }
+
+    .page-content {
+        padding: 0.5rem;
+    }
+}
+
 .article,
 .main-article,
 .side-article {
@@ -202,7 +220,7 @@ button {
 
 .article-img,
 .side-article-img {
-    height: 200px;
+    max-height: 200px;
 }
 
 .article-text-container {
